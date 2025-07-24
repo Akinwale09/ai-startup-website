@@ -222,3 +222,100 @@ Jerry Push to GitHub:
 ![GitHub](./img/35.JerryPushtoRemoteGitHub.png)
 
 Now, someone now need to review both Tom and Jerry work, merge the changes to the mainproject, and resolve conflict if any.  
+
+# Git Branching and Merging 
+## Part 3: Merging Changes
+
+After both Tom and Jerry have pushed thier changes, you (or another team member) can review and merge these changes into the main project. The process invloves. 
+
+1. Creating pull request
+2. Merging the Pull Request into main branch.
+
+A Pull Request (PR) is a feature used in GitHub (and other Git -based version controls) that allows you to notify team members about the changes you've pusshed to a branch in a repository. Essentially, it's a request to review and pull in your contribution to the main project. Pull request are central to the collaborative development process, enabling team member to discuss, review and make further changes before chnages are merged.
+
+### Creating a Pull Request on GitHub
+
+After both Tom and Jerry have pushed thier work to thier respective branches, the next step is to create a pull request for each of them. Here's how Tom would create a pull request for his changes:
+
+1. Navigate to the GitHub Repository: from web browser, we go to the GibHub page.
+2. Switch to the Branch: We click on the branch dropdown menu near the top left corner of the file list and select the branch Tom been working on, in this case, "Update-Navigation" branch.
+
+![tombranch](./img/36.update-navigation-branch.png)
+
+3. Create New Pull Request: Click on New Pull Request button next to branch drop down
+
+![PullRequest](./img/37.PullRequest.png)
+
+Git up will take you to a new page to initiate a pull request. It automatically selects the main project's branches as the base and your recently pushed branches as the compare branch. 
+
+4. Review Tom's Changes:
+   
+   Before creating the pull request, Tom would reveiw his chnages to ensure everything is correct. GitHub shows the differences between the base branch and Tom's branch. It's a good opportunity for Tom to double-check his work. 
+
+5. Create the pull request:
+
+   - If everything looks good, click the create pull request button.
+   - Probvide a title and dexcription for the pull request. The title should be concise and descriptive, and the description should explain the chnages that the pull request is about, why its needed and any other relevant deytails. 
+   - After filling in the information, click create pull request again to officially open the pull request. 
+
+     ![creatpullrequest](./img/38.PullRequestCreated.png)
+
+### Review and Merging Tom's Pull Request
+
+Once the pull request is created, it becomes visible to other team memeber who can review the chnages, leave comment and request additional modifications if necessary. When the team agrees that the chnages are ready and good to go, someone with merge permission can merge the pull request, incorporating the changes from Tom's update-navigation branch ionto the main branch. 
+
+![tobemerged](./img/39.Tobemerged.png)
+![Merged](./img/40.merged.png)
+
+### Updating Jerry's Branch with Latest Changes
+
+Before Jerry merges his changes into the main branch, it's is essential to ensure his branch is up to dat with the main branch. This is because other changes (like Tom's update) might have been merged into the main branch after Jerry started working on his features. Updating ensure compatibility and reduces the chances of conflicts. 
+
+### Steps to Update Jerry's Branch:
+
+  - On the terminal, switch to Jerry's Branch:
+
+    `git checkout add-account-into`
+
+    ![JerryBranch](./img/41.JerryBranch.png)
+
+   - Pull the Latest changes from the main Branch:
+
+     `git pull origin main`
+
+     ![JerryPull](./img/42.JerryPullMerged.png)
+
+Purpose: This command fetches the chnages from the main branch (Remember, main branch now has Tom's chnages) and merges them into Jerry's add-account-info branch. It ensures that any updates made to the main branch, like Tom's merged changes, are now included in jerry branch. This step is crucial for avoiding conflicts and ensuring that jerry's work can smoothly integrate with the main project.
+
+Merge the pull request to the main branch: Click the merge pull request button to merge Tom's changes into the main branch. This action combines Tom's contibution with the rest of the project, completing the collaborative workflow. 
+
+### Finalizing Jerry's Contribution
+
+Assuming there are no conflicts, Jerry's branch is now ready to be merged back into the main project. 
+
+  - Push the updated Branch to GitHub:
+
+     `git push origin add-account-info`
+
+     ![JerryPush](./img/43.JerryPush.png)
+
+Jerry Push Pull Request on the GitHub Remote Repository
+
+   ![JerryPush](./img/44.JeeryPushonGitHub.png) 
+
+This command upload Jerry's changes to the GitHub. Now, his branch reflects both his work and lates updates from the main branch. 
+
+The origin keyword in the command refers to the default name Git gives to the remote repository from which we clone the project. Its like a shortcut or an alias for the full URL of the repository in GitHub. 
+
+Now lets create the pull request (PR) for jerry's changes, similar to how we did for Tom.
+
+![JerryPull](./img/45.JerryPush.png)
+
+Merged Jerry's pull request. complete the process by merging the PR into the main branch. 
+
+![Merged](./img/46.Merged.png)
+
+
+This simulated workflow illustrate how Git facilitate collaboartive development, allowing multiple work simulataneously on different aspect of a project and merge thier contribution seamlessly, even while working on thesame files.
+
+End.
